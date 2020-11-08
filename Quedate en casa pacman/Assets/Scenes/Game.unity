@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 80254090}
   m_Layer: 0
   m_Name: escenario pasillo
-  m_TagString: Untagged
+  m_TagString: Laberinto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2742,6 +2742,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &619096109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619096112}
+  - component: {fileID: 619096111}
+  - component: {fileID: 619096110}
+  m_Layer: 0
+  m_Name: LimitesRight
+  m_TagString: LimiteRight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &619096110
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619096109}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &619096111
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619096109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24603033, y: 0.24603033}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.50793934, y: 1.4920607}
+  m_EdgeRadius: 0
+--- !u!4 &619096112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619096109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.31, y: -0.15, z: -13.567139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655675029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3275,6 +3354,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1736401397011047478, guid: a83d29bf34f184746946678551531833, type: 3}
       propertyPath: m_Name
+      value: Coronavirus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736401397011047478, guid: a83d29bf34f184746946678551531833, type: 3}
+      propertyPath: m_TagString
       value: Coronavirus
       objectReference: {fileID: 0}
     - target: {fileID: 4462140737277396817, guid: a83d29bf34f184746946678551531833, type: 3}
@@ -3922,7 +4005,7 @@ GameObject:
   - component: {fileID: 1066654850}
   - component: {fileID: 1066654849}
   m_Layer: 0
-  m_Name: escenario_0
+  m_Name: escenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5244,9 +5327,10 @@ GameObject:
   - component: {fileID: 1566945092}
   - component: {fileID: 1566945095}
   - component: {fileID: 1566945096}
+  - component: {fileID: 1566945097}
   m_Layer: 0
   m_Name: pacman
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5263,7 +5347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1369220bc1bca4347b19df8c2bf357e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpedd: 5
   speed: 20
 --- !u!212 &1566945093
 SpriteRenderer:
@@ -5324,8 +5407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566945091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.052, y: 0.001, z: 0}
-  m_LocalScale: {x: 0.7318032, y: 0.7318032, z: 0.7318032}
+  m_LocalPosition: {x: 5.64, y: -0.032, z: 0}
+  m_LocalScale: {x: 0.66322404, y: 0.66322404, z: 0.66322404}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -5370,6 +5453,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &1566945097
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566945091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.48000005
 --- !u!1 &1664457439
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,9 +5609,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724388955}
+  - component: {fileID: 1724388956}
+  - component: {fileID: 1724388957}
   m_Layer: 0
-  m_Name: Limites
-  m_TagString: Untagged
+  m_Name: LimiteLeft
+  m_TagString: LimiteLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5525,12 +5626,59 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724388954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9640565, y: 1.9872905, z: -13.567139}
+  m_LocalPosition: {x: -6.87, y: -0.15, z: -13.567139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1724388956
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724388954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24603033, y: 0.24603033}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.50793934, y: 1.4920607}
+  m_EdgeRadius: 0
+--- !u!50 &1724388957
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724388954}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1727180476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,7 +5821,7 @@ GameObject:
   - component: {fileID: 1735529002}
   m_Layer: 0
   m_Name: Laberito
-  m_TagString: Untagged
+  m_TagString: Laberinto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
