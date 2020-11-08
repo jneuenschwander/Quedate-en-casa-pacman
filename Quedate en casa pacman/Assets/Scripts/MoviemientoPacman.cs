@@ -60,6 +60,12 @@ public class MoviemientoPacman : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Debug.Log(transform.rotation);
+            if (transform.rotation.z != 90f)
+            {
+                transform.Rotate(0f, 0f, 90f);
+            }
+            
             Vector3 position = this.transform.position;
             position.y++;
             this.transform.position = position;
