@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6901601270824141960}
   - component: {fileID: 7717652652886019558}
   - component: {fileID: 5724893672855689940}
+  - component: {fileID: 269111976}
   m_Layer: 0
   m_Name: Vitamine
-  m_TagString: Untagged
+  m_TagString: Vitamina
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.53125, y: 18.71875}
   m_EdgeRadius: 0
+--- !u!114 &269111976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367737727801911726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6461ec070817f468fa6262547133b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

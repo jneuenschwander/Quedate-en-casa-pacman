@@ -9,6 +9,8 @@ TagManager:
   - Limite
   - LimiteRight
   - LimiteLeft
+  - Vitamina
+  - SmallPill
   layers:
   - Default
   - TransparentFX
