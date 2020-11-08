@@ -13,10 +13,12 @@ public class MoviemientoPacman : MonoBehaviour
     private bool down;
     float delta = 3f;
     private Animator animator;
-
+    private Transform playerRotation;
 
     void Start()
     {
+        playerRotation = GetComponent<Transform>();
+        
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -34,6 +36,10 @@ public class MoviemientoPacman : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+
+           
+            playerRotation.rotation = Quaternion.Euler(0f, 0f, 180f);
+           
             Vector3 position = this.transform.position;
             position.x--;
             this.transform.position = position;
@@ -47,6 +53,8 @@ public class MoviemientoPacman : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            playerRotation.rotation = Quaternion.Euler(0f, 0f, 0f);
+            
             Vector3 position = this.transform.position;
             position.x++;
             this.transform.position = position;
@@ -60,12 +68,10 @@ public class MoviemientoPacman : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log(transform.rotation);
-            if (transform.rotation.z != 90f)
-            {
-                transform.Rotate(0f, 0f, 90f);
-            }
-            
+
+
+            playerRotation.rotation = Quaternion.Euler(0f, 0f, 90f);
+
             Vector3 position = this.transform.position;
             position.y++;
             this.transform.position = position;
@@ -79,6 +85,8 @@ public class MoviemientoPacman : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            playerRotation.rotation = Quaternion.Euler(0f, 0f, -90f);
+            
             Vector3 position = this.transform.position;
             position.y--;
             this.transform.position = position;
