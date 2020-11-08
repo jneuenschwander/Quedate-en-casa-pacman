@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class MoviemientoPacman : MonoBehaviour
@@ -100,6 +101,16 @@ public class MoviemientoPacman : MonoBehaviour
 
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "LimiteRight")
+        {
+            transform.position = new Vector3(-5.64f, transform.position.y, transform.position.z);
+        }
+        if (collision.gameObject.tag == "LimiteLeft")
+        {
+            transform.position = new Vector3(5.64f, transform.position.y, transform.position.z);
+        }
+    }
 
 }
