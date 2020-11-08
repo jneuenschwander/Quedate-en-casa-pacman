@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MoviemientoPacman : MonoBehaviour
 {
-    public float maxSpedd = 5f;
-    public float speed = 20f;
+    public float speed = 0.3f;
     private Rigidbody2D rb2d;
     private bool left;
     private bool right;
@@ -41,7 +40,7 @@ public class MoviemientoPacman : MonoBehaviour
             playerRotation.rotation = Quaternion.Euler(0f, 0f, 180f);
            
             Vector3 position = this.transform.position;
-            position.x--;
+            position.x-=0.3f;
             this.transform.position = position;
 
             up = false;
@@ -56,7 +55,7 @@ public class MoviemientoPacman : MonoBehaviour
             playerRotation.rotation = Quaternion.Euler(0f, 0f, 0f);
             
             Vector3 position = this.transform.position;
-            position.x++;
+            position.x+=0.3f; 
             this.transform.position = position;
 
             up = false;
@@ -73,7 +72,7 @@ public class MoviemientoPacman : MonoBehaviour
             playerRotation.rotation = Quaternion.Euler(0f, 0f, 90f);
 
             Vector3 position = this.transform.position;
-            position.y++;
+            position.y+=0.3f;
             this.transform.position = position;
 
             up = true;
@@ -88,7 +87,7 @@ public class MoviemientoPacman : MonoBehaviour
             playerRotation.rotation = Quaternion.Euler(0f, 0f, -90f);
             
             Vector3 position = this.transform.position;
-            position.y--;
+            position.y-=0.3f;
             this.transform.position = position;
 
             up = false;
