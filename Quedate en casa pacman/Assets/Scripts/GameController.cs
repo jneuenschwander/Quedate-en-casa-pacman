@@ -27,6 +27,8 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        Ganar();
+        Perder();
         if (isDead && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // control para reiniciar el juego
@@ -34,7 +36,7 @@ public class GameController : MonoBehaviour
     }
     public void Ganar()
     {
-        if (jugador.Puntaje >= 49)
+        if (jugador.Puntaje >= 59)
         {
             isDead = true;
             gameWinText.SetActive(enabled);
