@@ -4,16 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using TMPro;
+
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    [SerializeField] private GameObject gameOverText;
-    [SerializeField] private GameObject gameWinText;
+    [SerializeField] public GameObject canvasGameOver;
+    [SerializeField] public GameObject canvasGameWin;
+    public TextMeshProUGUI textWin;
+    public TextMeshProUGUI textLost;
     public Player jugador = new Player();
     public bool isDead = false;
+
     
     private void Awake()
     {
+        jugador.Puntaje = 0;
         if (GameController.Instance == null) // control donde nos aseguramos que solo exista un instacia singleton
         {
             GameController.Instance = this; 
@@ -35,10 +41,12 @@ public class GameController : MonoBehaviour
     }
     public void Ganar()
     {
-        if (jugador.Puntaje >= 49)
+        if (jugador.Puntaje >=63)
         {
+
+            textWin.SetText(jugador.Puntaje.ToString());
             isDead = true;
-            gameWinText.SetActive(enabled);
+            canvasGameWin.SetActive(enabled);
             if (isDead && Input.GetKey(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name); // control para reiniciar el juego
@@ -50,11 +58,13 @@ public class GameController : MonoBehaviour
         if (jugador.Vida == 0)
         {
             isDead = true;
-            gameOverText.SetActive(enabled);
+            textLost.SetText(jugador.Puntaje.ToString());
+            canvasGameOver.SetActive(enabled);
             if (isDead && Input.GetKey(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name); // control para reiniciar el juego
             }
+            
         }
     }
 }
