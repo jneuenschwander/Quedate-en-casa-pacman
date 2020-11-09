@@ -34,7 +34,6 @@ public class GameController : MonoBehaviour
     }
     public void Ganar()
     {
-        
         if (jugador.Puntaje >= 49)
         {
             isDead = true;
@@ -44,7 +43,6 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name); // control para reiniciar el juego
             }
         }
-        
     }
     public void Perder()
     {

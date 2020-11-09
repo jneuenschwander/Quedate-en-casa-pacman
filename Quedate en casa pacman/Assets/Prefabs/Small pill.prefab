@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1343752080870659377}
   - component: {fileID: 3213916080000035236}
   - component: {fileID: 3707229766477621206}
-  - component: {fileID: 4698633854743418832}
   m_Layer: 0
   m_Name: Small pill
   m_TagString: SmallPill
@@ -110,15 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.96875, y: 15.3125}
   m_EdgeRadius: 0
---- !u!114 &4698633854743418832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412627615405136520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6461ec070817f468fa6262547133b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

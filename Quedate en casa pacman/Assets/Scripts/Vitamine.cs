@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Vitamine : ItemDecorator
 {
-    private Pill _pill;
+    public Pill _pill;
     public Vitamine(Item Item) : base(Item)// !!!!verificar si funciona
     {
         this._pill =  (Pill)Item;

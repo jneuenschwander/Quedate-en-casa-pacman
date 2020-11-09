@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class ItemDecorator : Item
 {
-    protected Item dropItem;
+    protected Item Item;
 
-    public ItemDecorator(Item dropItem)
+    public ItemDecorator(Item item)
     {
-        this.dropItem = dropItem;
+        this.Item = item;
     }
 
     public Item DropItem
     {
-        get => dropItem;
-        set => dropItem = value;
+        get => Item;
+        set => Item = value;
     }
 
     public override int Puntaje()
     {
-        if (this.dropItem != null)
+        if (this.Item != null)
         {
-            return this.dropItem.Puntaje();
+            return this.Item.Puntaje();
         }
         else
         {

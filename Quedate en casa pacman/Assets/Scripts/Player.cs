@@ -15,7 +15,7 @@ public class Player
 
     public int Puntaje
     {
-        get => Puntaje;
-        set => Puntaje = value;
+        get => puntaje;
+        set => puntaje = value;
     }
 }

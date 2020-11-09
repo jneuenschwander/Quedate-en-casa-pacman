@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Pill : Item
 {
-    private int _valor = 1;
+    public int valor = 1;
+  
     public override int Puntaje()
     {
-        return _valor;
+        return valor;
     }
 }
