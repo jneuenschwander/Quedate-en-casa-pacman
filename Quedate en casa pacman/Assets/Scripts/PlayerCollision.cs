@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
 
     public Vitamine vitamine = new Vitamine(new Pill());
 
-   
+    public Transform spawn;   
 
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -30,6 +30,7 @@ public class PlayerCollision : MonoBehaviour
         else if (collision.gameObject.CompareTag("Coronavirus"))
         {
             GameController.Instance.jugador.Vida -= 1;
+            gameObject.transform.position = spawn.position;
         }
     
     }

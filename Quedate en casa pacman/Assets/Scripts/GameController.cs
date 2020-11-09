@@ -22,11 +22,12 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
             Debug.LogWarning("GameController a sido instanciado por segunda vez, evento ilegal.");
         }
-        
     }
 
     private void Update()
     {
+        Ganar();
+        Perder();
         if (isDead && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // control para reiniciar el juego
