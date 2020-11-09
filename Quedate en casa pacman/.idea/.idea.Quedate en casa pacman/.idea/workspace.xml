@@ -48,12 +48,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1k17gxXgpl00MXb12VBhWgR6vva" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -94,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604856397207</updated>
       <workItem from="1604856429926" duration="1323000" />
-      <workItem from="1604889691268" duration="1681000" />
+      <workItem from="1604889691268" duration="2603000" />
     </task>
     <servers />
   </component>
@@ -116,6 +119,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
