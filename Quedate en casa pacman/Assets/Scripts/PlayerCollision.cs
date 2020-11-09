@@ -9,7 +9,10 @@ public class PlayerCollision : MonoBehaviour
 
     public Vitamine vitamine = new Vitamine(new Pill());
 
-    public Transform spawn;   
+    public Transform spawn;
+    //[SerializeField] public TextMeshProUGUI tmpPtsOver;
+    //[SerializeField] public TextMeshProUGUI tmpPtsWin;
+
 
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -20,13 +23,19 @@ public class PlayerCollision : MonoBehaviour
             GameController.Instance.jugador.Puntaje += pill.Puntaje();
             print(GameController.Instance.jugador.Puntaje);
             Destroy(collision.gameObject);
+
+            //tmpPtsOver.SetText(GameController.Instance.jugador.Puntaje);
+            //tmpPtsWin.SetText(GameController.Instance.jugador.Puntaje);
+
         }
+
         else if(collision.gameObject.CompareTag("Vitamina"))
         {
             GameController.Instance.jugador.Puntaje += vitamine.Puntaje();
             print(GameController.Instance.jugador.Puntaje);
             Destroy(collision.gameObject);
         }
+
         else if (collision.gameObject.CompareTag("Coronavirus"))
         {
             GameController.Instance.jugador.Vida -= 1;
