@@ -13,6 +13,7 @@
           <e p="ItemDecorator.cs" t="Include" />
           <e p="MenuPrincipal.cs" t="Include" />
           <e p="MoviemientoPacman.cs" t="Include" />
+          <e p="MovimientoCovid.cs" t="Include" />
           <e p="Pill.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerCollision.cs" t="Include" />
